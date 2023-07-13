@@ -23,7 +23,7 @@ const App = () => {
                 value={message}
               />
         
-              <h2>{message}</h2>
+              <p>{message}</p>
             </div>
           );
 
