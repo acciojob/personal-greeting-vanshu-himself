@@ -3,29 +3,33 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [message, setMessage]=useState('');
+  const [message, setMessage]=useState();
 
   const handleChange = event => {
-    if(event.target.value.length!=0){
-     
-      setMessage(event.target.value);
-      
-    }else{
-      setMessage('Hello '+event.target.value+'!');}
+    let ct=0;
+    if(ct==0){
+      let k="Hello "+event.target.value+"!"
+     setMessage(k)
+    }else if(event.value.length==0){
+      setMessage("")
+    }
+    else {
+      setMessage(event.target.value)
+    }
     
         // console.log('value is:', event.target.value);
       };
       return (
             <div>
-              <label for="message">Enter your name:</label> 
-              <br/>
-              <br/>
+              <p>Enter your name:</p>
+              
+           
               <input
                 type="text"
                 id="message"
                 name="message"
                 onChange={handleChange}
-                value={message}
+                // value={message}
               />
         
               <p>{message}</p>
