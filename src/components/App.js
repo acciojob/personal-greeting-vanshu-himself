@@ -6,7 +6,12 @@ const App = () => {
   const [message, setMessage]=useState('');
 
   const handleChange = event => {
-        setMessage(event.target.value);
+    if(event.target.value.length!=0){
+     
+      setMessage(event.target.value);
+      
+    }else{
+      setMessage('Hello '+event.target.value+'!');}
     
         // console.log('value is:', event.target.value);
       };
