@@ -20,6 +20,7 @@ const App = () => {
       return (
             <div>
               <label>Enter your name:</label>
+              <br/>
               
            
               <input
